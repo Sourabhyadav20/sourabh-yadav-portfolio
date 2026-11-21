@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sourabh Yadav – Backend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f0fa;--panel:#ffffffcc;--ink:#1b1840;--mute:#5b5886;--a:#d6336c;--b:#0a8fa8;--line:#1b184026;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1024;--panel:#171a3acc;--ink:#ecebff;--mute:#a3a1d1;--a:#ff6b9a;--b:#5fd6ec;--line:#ecebff26;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1024;--panel:#171a3acc;--ink:#ecebff;--mute:#a3a1d1;--a:#ff6b9a;--b:#5fd6ec;--line:#ecebff26;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main,header{position:relative;z-index:1}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.05;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:1.2rem;justify-content:flex-end;padding:.9rem 1.5rem;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;background:var(--panel);padding:.35rem .8rem;border-radius:99px;backdrop-filter:blur(8px)}
+nav a:hover,nav a:focus-visible{outline:2px solid var(--a)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(1.2rem,6vw,5rem);max-width:760px}
+.hero h1{font-size:clamp(3rem,10vw,7rem);font-weight:800;letter-spacing:-.03em}
+.hero p{max-width:34em;color:var(--mute);font-size:1.15rem;margin:1.2rem 0 1.6rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.3rem;border-radius:10px;font-weight:600;text-decoration:none;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.p{background:var(--a);border-color:var(--a);color:#fff}
+.btn:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+.hint{font-size:.85rem;color:var(--mute);margin-top:1.4rem}
+section{padding:4.5rem clamp(1.2rem,6vw,5rem);max-width:1100px}
+section h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1.6rem;letter-spacing:-.02em}
+.panel{background:var(--panel);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;perspective:1000px}
+.card{transform-style:preserve-3d;transition:transform .15s ease-out;will-change:transform}
+.card h3{font-size:1.3rem;margin-bottom:.4rem}
+.tags{color:var(--b);font-size:.85rem;font-weight:600;margin:0 0 .6rem}
+.card ul,.exp ul{margin:.4rem 0 0;padding-left:1.1rem;color:var(--mute)}
+.card li,.exp li{margin:.25rem 0}
+.exp h3{font-size:1.5rem}.exp .meta{color:var(--a);font-weight:600;margin:.2rem 0 .8rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.skills h3{font-size:1.05rem;color:var(--a);margin-bottom:.5rem}
+.skills span{display:inline-block;margin:.2rem .3rem .2rem 0;padding:.2rem .65rem;border:1px solid var(--line);border-radius:99px;font-size:.9rem}
+.edu{display:grid;gap:.9rem}
+.edu div{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:.8rem}
+.edu b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem}
+.edu small{color:var(--mute);display:block}
+.contact a{color:var(--ink);font-weight:600}
+footer{position:relative;z-index:1;text-align:center;color:var(--mute);font-size:.85rem;padding:2rem 1rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<nav aria-label="Sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+<header class="hero">
+  <h1>Sourabh Yadav</h1>
+  <p>Backend developer building scalable, secure REST APIs with Node.js, Express.js and MongoDB. Currently interning at Camncloud Technologies in Indore.</p>
+  <div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+  <p class="hint">Move your mouse (or drag) to turn the skill network.</p>
+</header>
+<main>
+<section id="experience"><h2>Experience</h2>
+  <div class="panel exp">
+    <h3>Node.js Developer Intern</h3>
+    <p class="meta">Camncloud Technologies Pvt. Ltd., Indore · June 2026 – present</p>
+    <ul>
+      <li>Develop and maintain RESTful APIs with Node.js and Express.js.</li>
+      <li>Design MongoDB data models and handle CRUD operations.</li>
+      <li>Build backend features: API integration, validation, authentication and error handling.</li>
+      <li>Use Git/GitHub for version control and Insomnia for API testing.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects"><h2>Projects</h2>
+  <div class="grid">
+    <article class="panel card"><h3>LiveSchool</h3><p class="tags">Node.js · Express · MongoDB · Async/Await</p>
+      <ul><li>Converted promise-based backend code to async/await.</li><li>Added try-catch error handling for reliable API responses.</li><li>Built the getDashboardDatabyrole and getleadsdashboarddata APIs.</li></ul></article>
+    <article class="panel card"><h3>MediQAI</h3><p class="tags">React · Node.js · Express · MongoDB</p>
+      <ul><li>Major project: full-stack AI healthcare management system.</li><li>AI-powered symptom analysis and appointment booking.</li><li>REST APIs for authentication, patient records and the doctor dashboard.</li></ul></article>
+    <article class="panel card"><h3>Task Manager REST API</h3><p class="tags">JWT · bcrypt · Nodemailer · Express Validator</p>
+      <ul><li>Task CRUD with status filtering and unique IDs.</li><li>JWT authentication with role-based access control.</li><li>Request and activity logging, global error handling, email notifications.</li></ul></article>
+    <article class="panel card"><h3>User Admin Task Management</h3><p class="tags">Node.js · MongoDB · JWT · bcrypt</p>
+      <ul><li>Role-based backend for Admin and User operations.</li><li>Secure password hashing and JWT authorization.</li><li>Task assignment, input validation and centralized error handling.</li></ul></article>
+    <article class="panel card"><h3>User Notification Service</h3><p class="tags">Node.js · Express · Nodemailer</p>
+      <ul><li>APIs for users, email notifications and activity logs.</li><li>Duplicate-user prevention and email validation.</li><li>Email logs with success/failure status and timestamps.</li></ul></article>
+  </div>
+</section>
+
+<section id="skills"><h2>Skills</h2>
+  <div class="panel skills">
+    <div><h3>Backend</h3><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>JWT</span></div>
+    <div><h3>Database</h3><span>MongoDB</span></div>
+    <div><h3>Frontend</h3><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Angular.js</span></div>
+    <div><h3>Tools</h3><span>Git/GitHub</span><span>VS Code</span><span>Insomnia</span></div>
+    <div><h3>Design</h3><span>UI/UX basics</span><span>Canva</span><span>Photoshop</span></div>
+  </div>
+</section>
+
+<section id="education"><h2>Education and certification</h2>
+  <div class="panel edu">
+    <div><span><b>B.Tech, Computer Science Engineering</b><small>Shivajirao Kadam Institute of Technology and Management, Indore (RGPV Bhopal)</small></span><span>2022–2026 · CGPA 6.75</span></div>
+    <div><span><b>Delta, Full Stack Web Development</b><small>Apna College · MERN stack and real-world web apps</small></span><span>2026</span></div>
+    <div><span><b>12th, M.P. Board</b><small>St. Joseph H.S. School, Barwani</small></span><span>2021–2022 · 62.6%</span></div>
+    <div><span><b>10th, M.P. Board</b><small>St. Joseph H.S. School, Barwani</small></span><span>2019–2020 · 81%</span></div>
+  </div>
+</section>
+
+<section id="contact"><h2>Let’s talk</h2>
+  <div class="panel contact">
+    <p>I’m a quick learner who enjoys solving problems, and I’m looking to join a growth-oriented team building reliable backend applications.</p>
+    <p><a href="mailto:sourabhyadav96850@gmail.com">sourabhyadav96850@gmail.com</a><br><a href="tel:+919685031475">+91 96850 31475</a><br><a href="https://linkedin.com/in/sourabh-yadav-a39185285" target="_blank" rel="noopener">linkedin.com/in/sourabh-yadav-a39185285</a></p>
+  </div>
+</section>
+</main>
+<footer>Sourabh Yadav · Indore, Madhya Pradesh</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv=document.getElementById('gl');
+  var css=function(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()};
+  var R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2));
+  var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,1,.1,100);C.position.z=9;
+  var G=new THREE.Group();S.add(G);
+  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.3,1),new THREE.MeshBasicMaterial({wireframe:true}));
+  var core2=new THREE.Mesh(new THREE.OctahedronGeometry(.6),new THREE.MeshBasicMaterial());
+  G.add(core,core2);
+  var names=['Node.js','Express','MongoDB','REST','JWT','bcrypt','Nodemailer','React','Git','Insomnia','JavaScript','Async/Await'];
+  var nodes=[],lines=[],sprites=[];
+  var lineMat=new THREE.LineBasicMaterial({transparent:true,opacity:.35});
+  names.forEach(function(n,i){
+    var k=i+.5,phi=Math.acos(1-2*k/names.length),th=Math.PI*(1+Math.sqrt(5))*k,r=3.4+(i%3)*.5;
+    var p=new THREE.Vector3(r*Math.sin(phi)*Math.cos(th),r*Math.cos(phi),r*Math.sin(phi)*Math.sin(th));
+    var m=new THREE.Mesh(new THREE.SphereGeometry(.16,16,16),new THREE.MeshBasicMaterial());
+    m.position.copy(p);G.add(m);nodes.push(m);
+    var l=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),p]),lineMat);G.add(l);
+    var c=document.createElement('canvas');c.width=256;c.height=64;
+    var t=new THREE.CanvasTexture(c);
+    var s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthWrite:false}));
+    s.scale.set(1.6,.4,1);s.position.copy(p).multiplyScalar(1.0).add(new THREE.Vector3(0,.35,0));
+    s.userData={c:c,t:t,n:n};G.add(s);sprites.push(s);
+  });
+  var pts=new Float32Array(600*3);for(var i=0;i<pts.length;i++)pts[i]=(Math.random()-.5)*26;
+  var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pts,3));
+  var dust=new THREE.Points(pg,new THREE.PointsMaterial({size:.03,transparent:true,opacity:.6}));S.add(dust);
+  function theme(){
+    var a=css('--a'),b=css('--b'),ink=css('--ink');
+    core.material.color.set(b);core2.material.color.set(a);lineMat.color.set(b);dust.material.color.set(ink);
+    nodes.forEach(function(m,i){m.material.color.set(i%2?a:b)});
+    sprites.forEach(function(s){var x=s.userData.c.getContext('2d');x.clearRect(0,0,256,64);
+      x.font='600 30px Figtree,system-ui,sans-serif';x.textAlign='center';x.fillStyle=ink;x.fillText(s.userData.n,128,42);s.userData.t.needsUpdate=true});
+  }
+  theme();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){setTimeout(theme,50)});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(theme);
+  var mx=0,my=0,drag=false,lx=0,ly=0,rx=0,ry=0;
+  addEventListener('pointermove',function(e){
+    mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;
+    if(drag){ry+=(e.clientX-lx)*.008;rx+=(e.clientY-ly)*.008;lx=e.clientX;ly=e.clientY}});
+  cv.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;ly=e.clientY});
+  addEventListener('pointerup',function(){drag=false});
+  function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;
+    C.position.z=w<700?13:9;G.position.x=w<900?0:2.6;C.updateProjectionMatrix()}
+  size();addEventListener('resize',size);
+  var t0=0;
+  function loop(t){
+    var s=window.scrollY/Math.max(1,document.body.scrollHeight-innerHeight);
+    if(!reduce)ry+=.0025;
+    G.rotation.y+=(ry+mx*.8-G.rotation.y)*.06;
+    G.rotation.x+=(rx+my*.5+s*1.2-G.rotation.x)*.06;
+    core2.rotation.y=t*.001;core.rotation.x=t*.0004;
+    var sc=1-s*.35;G.scale.setScalar(sc);
+    dust.rotation.y=t*.00003+s;
+    R.render(S,C);requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  // 3D tilt on project cards
+  if(!reduce)document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();
+      var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform='rotateY('+(x*12)+'deg) rotateX('+(-y*12)+'deg) translateZ(8px)'});
+    c.addEventListener('pointerleave',function(){c.style.transform=''});
+  });
+})();
+</script>
+</body>
+</html>
